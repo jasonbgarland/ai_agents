@@ -1,3 +1,6 @@
 openai
+click
 python-dotenv
-pydantic
+pytest
+pylint
+black

@@ -120,9 +120,9 @@ Formats a DailyStatus object into a readable bulleted list.
 
 - `str`: Formatted status as markdown with section headers
 
-### `daily_standup_with_output(status: str) -> DailyStatus`
+### `daily_standup_with_output(status: str) -> str`
 
-Convenience function that processes status and prints formatted output.
+Convenience function that processes status and returns formatted output or error message.
 
 ## Testing
 
@@ -158,34 +158,3 @@ The agent uses the following OpenAI configuration:
 
 - **Model**: `gpt-4.1-nano` (configured in `agent.py`)
 - **API Key**: Read from `OPENAI_API_KEY` environment variable
-
-## File Structure
-
-```
-src/daily_standup/
-├── __init__.py          # Package exports
-├── agent.py             # Main agent implementation
-├── example.py           # Usage examples and interactive demo
-└── README.md            # This file
-
-tests/daily_standup/
-├── __init__.py          # Test package
-└── test_agent.py        # Comprehensive test suite
-```
-
-## Contributing
-
-When making changes to the daily standup agent:
-
-1. Update the appropriate functions in `agent.py`
-2. Add corresponding tests in `test_agent.py`
-3. Update this README if the API changes
-4. Run the test suite to ensure everything works
-5. Test with the example script to verify functionality
-
-## Dependencies
-
-- `openai`: For GPT model integration
-- `pydantic`: For structured data models
-- `python-dotenv`: For environment variable management
-- `pytest`: For testing (development dependency)

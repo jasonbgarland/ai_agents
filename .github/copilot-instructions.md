@@ -8,9 +8,7 @@
 - Always break down solutions into steps and confirm before proceeding
 - Follow test driven development (TDD) principles as much as possible
 - Prefer iterative solutions, start small and iterate
-- Use clear, descriptive variable and function names
 - Write comments for complex logic
-- Keep functions small and focused on a single responsibility
 
 ### Language-Specific Preferences
 
@@ -20,20 +18,14 @@
 - Use type hints for function parameters and return values
 - Prefer f-strings for string formatting
 - Use descriptive variable names (avoid abbreviations)
-- xUnit style tests using the built in `unittest` module
+- Use xUnit style tests using the built in `unittest` module
 - Do not use the `__all__` pattern in `__init__.py` files; importing \* is not a preferred pattern in this project
-
-#### Other Languages
-
-<!-- Add preferences for other languages you use -->
 
 ## Architecture & Patterns
 
 - Prefer composition over inheritance
 - Use dependency injection where appropriate
 - Follow SOLID principles
-- Implement error handling consistently
-- Write unit tests for new functionality
 
 ## File Organization
 
@@ -61,10 +53,7 @@
 
 ### When Suggesting Code:
 
-- Always include error handling where appropriate
 - Suggest meaningful variable names based on context
-- Include necessary imports/dependencies
-- Consider edge cases and validation
 - Optimize for readability over cleverness
 
 ### When Refactoring:
@@ -89,25 +78,9 @@
 - Cloud Platforms: Azure
 - Development Tools: Docker, CI/CD tools
 
-### Preferred Libraries:
-
-<!-- - HTTP requests: [e.g., axios, fetch, requests]
-- Date/time handling: [e.g., date-fns, moment.js, datetime]
-- Testing: [e.g., Jest, pytest, Go testing] -->
-
 - Validation: pydantic
-
-## Environment & Deployment
-
-<!-- - Development environment: [e.g., local Docker, virtual environments]
-- Deployment target: [e.g., AWS Lambda, Kubernetes, traditional servers]
-- Environment variables for configuration
-- Health checks and monitoring endpoints -->
 
 ## Security Considerations
 
 - Always validate user input
-- Use parameterized queries for databases
-- Implement proper authentication and authorization
 - Don't commit secrets or API keys
-- Follow security best practices for the specific technology stack
