@@ -7,6 +7,7 @@ Provides subcommands for interacting with the top news and daily standup agents.
 import click
 from src.top_news.agent import top_news
 from src.daily_standup.agent import daily_standup_with_output as standup
+from src.bug_report.agent import BugReportAgent
 
 
 @click.group()
@@ -30,6 +31,13 @@ def standup_cmd(status_input):
     """Gather daily status and present it in a standard format. (Enclose your status in quotes)"""
     result = standup(status_input)
     click.echo(result)
+
+
+@ai.command(name="bug-report")
+def bug_report_cmd():
+    """Start an interactive bug report session."""
+    agent = BugReportAgent()
+    agent.report_bug()
 
 
 if __name__ == "__main__":
