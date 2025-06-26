@@ -94,3 +94,9 @@ To see all available commands and options:
 
 - Make sure your dependencies are installed (`pip install -r requirements.txt`).
 - The CLI requires a valid OpenAI API key set in your environment as `OPENAI_API_KEY`.
+
+## Future Work
+
+- Support for non-plain-text file types (PDF, DOCX, CSV, etc.) in the File Search Agent
+- CLI-level integration tests for all commands using Click's CliRunner
+- Further feature enhancements or agent types as needed

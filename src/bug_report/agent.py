@@ -25,7 +25,8 @@ class BugReportAgent:
     def __init__(self):
         # Initialize conversation state
         self.state: Dict[str, Any] = {}
-        # Define the fields to collect in order. This is so that we can prompt the user with the correct questions later.
+        # Define the fields to collect in order.
+        # This is so that we can prompt the user with the correct questions later.
         self.fields = [
             "project_affected",
             "error_message",
