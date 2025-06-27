@@ -9,6 +9,8 @@ from src.top_news.agent import top_news
 from src.daily_standup.agent import daily_standup_with_output as standup
 from src.bug_report.agent import BugReportAgent
 from src.file_search.agent import FileSearchAgent
+from src.dev_tools.agent import DevToolsAgent
+from src.dev_tools.function_schemas import get_openai_function_schemas
 
 
 @click.group()
@@ -68,6 +70,14 @@ def file_search_cmd(file_paths, question):
     if file_ids:
         final_answer = agent.answer_question_multiple_files(file_ids, question)
         click.echo(f"\nSYNTHESIZED ANSWER:\n{final_answer}")
+
+
+@ai.command(name="dev-tools")
+def dev_tools_cmd():
+    """Start an interactive DevToolsAgent session (OpenAI-powered developer tools)."""
+    agent = DevToolsAgent()
+    function_schemas = get_openai_function_schemas()
+    agent.run_openai_chat_loop(function_schemas)
 
 
 if __name__ == "__main__":

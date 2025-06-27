@@ -20,6 +20,7 @@ This project is a collection of AI agents built for learning and experimenting w
 | Daily Standup | Automates daily standup meeting preparation and summaries  | Natural Language Processing, Structured Outputs                                      | [README](src/daily_standup/README.md) |
 | Top News      | Fetches and summarizes the top news stories of the day     | Web Search (Tool call - built in), Summarization, Markdown Table Output              | [README](src/top_news/README.md)      |
 | Bug Report    | Interactive bug reporting agent for structured bug reports | Multi-turn Conversation, Conversation State, Input Validation, Pydantic Model Output | [README](src/bug_report/README.md)    |
+| Dev Tools     | OpenAI-powered developer automation agent                  | Natural Language Chat, Custom Function Calling (multiple functions)                  | [README](src/dev_tools/README.md)     |
 
 ## Getting Started
 
@@ -73,9 +74,23 @@ The CLI provides access to three agents:
   - Enclose your status update in quotes.
 
 - **bug-report**: Start an interactive bug report session
+
   - Usage: `./ai bug-report`
   - Example: `./ai bug-report`
   - The agent will prompt you for all required bug details (project, error, steps, severity) and output a structured report.
+
+- **file-search**: Ask a question about one or more text files
+
+  - Usage: `./ai file-search FILE1 [FILE2 ...] "Your question here"`
+
+- **dev-tools**: Start the OpenAI-powered developer tools chat loop
+  - Usage: `./ai dev-tools`
+  - Example: `./ai dev-tools`
+  - This launches an interactive session where you can type requests like:
+    - `Format my code`
+    - `Run all unit tests`
+    - `Check for uncommitted git files`
+    - Type `exit` to quit.
 
 #### 3. Help
 
@@ -86,6 +101,8 @@ To see all available commands and options:
 ./ai news --help
 ./ai standup --help
 ./ai bug-report --help
+./ai file-search --help
+./ai dev-tools --help
 ```
 
 ---
